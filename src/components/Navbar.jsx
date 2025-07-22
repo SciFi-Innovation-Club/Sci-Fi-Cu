@@ -10,7 +10,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="w-full bg-gradient-to-r from-gray-900 via-blue-900 to-gray-900 text-white shadow-lg border-b border-blue-500/20 sticky top-0 z-50 backdrop-blur-sm">
+    <nav className="w-full bg-gradient-to-r from-black via-gray-950 to-black text-white shadow-lg border-b border-blue-500/20 sticky top-0 z-50 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
