@@ -39,7 +39,7 @@ export default function Stars() {
     // Generate asteroids
     const generateAsteroids = () => {
       const asteroidArray = [];
-      const numAsteroids = 15; // Number of asteroids
+      const numAsteroids = 10; // Number of asteroids
 
       for (let i = 0; i < numAsteroids; i++) {
         asteroidArray.push({
@@ -157,13 +157,13 @@ export default function Stars() {
       {asteroids.map((asteroid) => (
         <div
           key={`asteroid-${asteroid.id}`}
-          className={`absolute bg-${asteroid.color} rounded-full transition-all duration-300 ease-out`}
+          className="absolute bg-transparent rounded-full transition-all duration-300 ease-out"
           style={{
             left: `${asteroid.x}%`,
             top: `${asteroid.y}%`,
             width: `${asteroid.size}px`,
             height: `${asteroid.size}px`,
-            transform: `rotate(${Date.now() * 0.001 * asteroid.rotationSpeed}rad)`,
+            transform: `rotate(${asteroid.rotation}rad)`,
             boxShadow: '0 0 10px rgba(75, 85, 99, 0.5)',
             background: `radial-gradient(circle at 30% 30%, #9ca3af, #6b7280, #374151)`,
           }}
