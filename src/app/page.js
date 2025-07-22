@@ -1,7 +1,10 @@
+import Stars from '../components/Stars';
+
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-950 to-black">
-      <main className="flex flex-col items-center justify-center min-h-screen px-4">
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-950 to-black relative overflow-hidden">
+      <Stars />
+      <main className="flex flex-col items-center justify-center min-h-screen px-4 relative z-10">
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">
             Sci-Fi Innovation Club
@@ -29,12 +32,6 @@ export default function Home() {
             </a>
           </div>
         </div>
-
-        {/* Floating elements for sci-fi effect */}
-        <div className="absolute top-20 left-10 w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
-        <div className="absolute top-40 right-20 w-1 h-1 bg-purple-400 rounded-full animate-ping"></div>
-        <div className="absolute bottom-40 left-20 w-3 h-3 bg-blue-300 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-1 h-1 bg-purple-300 rounded-full animate-ping"></div>
       </main>
     </div>
   );
