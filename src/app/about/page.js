@@ -159,7 +159,7 @@ export default function About() {
                 <p className="text-gray-400 text-sm">Embracing the power of emerging technologies</p>
               </div>
               <div className="p-6">
-                <div className="text-3xl mb-3">�</div>
+                <div className="text-3xl mb-3">🌍</div>
                 <h3 className="text-lg font-bold text-purple-400 mb-2">Impact</h3>
                 <p className="text-gray-400 text-sm">Creating positive change for humanity</p>
               </div>
