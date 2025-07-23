@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import { useState } from 'react';
 
 export default function Navbar() {
@@ -8,70 +9,55 @@ export default function Navbar() {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  // Smooth scroll function
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      });
-      setIsMenuOpen(false); // Close mobile menu
-    }
-  };
-
   return (
     <nav className="w-full bg-gradient-to-r from-black via-gray-950 to-black text-white shadow-lg border-b border-blue-500/20 sticky top-0 z-50 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <button 
-              onClick={() => scrollToSection('home')}
-              className="flex items-center space-x-2 cursor-pointer"
-            >
+            <Link href="/" className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-br from-blue-400 to-purple-500 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">SF</span>
               </div>
               <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 Sci-Fi CU
               </span>
-            </button>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              <button
-                onClick={() => scrollToSection('home')}
+              <Link
+                href="/"
                 className="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-blue-700/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
               >
                 Home
-              </button>
-              <button
-                onClick={() => scrollToSection('about')}
+              </Link>
+              <Link
+                href="/about"
                 className="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-blue-700/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
               >
                 About
-              </button>
-              <button
-                onClick={() => scrollToSection('team')}
+              </Link>
+              <Link
+                href="/team"
                 className="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-blue-700/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
               >
                 Team
-              </button>
-              <button
-                onClick={() => scrollToSection('contact')}
+              </Link>
+              <Link
+                href="/contact"
                 className="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-blue-700/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
               >
                 Contact
-              </button>
-              <button
-                onClick={() => scrollToSection('contact')}
+              </Link>
+              <Link
+                href="/join"
                 className="px-4 py-2 rounded-md text-sm font-medium bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/50 border border-blue-500/50"
               >
                 Join Us
-              </button>
+              </Link>
             </div>
           </div>
 
@@ -99,36 +85,41 @@ export default function Navbar() {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-800/50 rounded-lg mt-2 backdrop-blur-sm border border-blue-500/20">
-              <button
-                onClick={() => scrollToSection('home')}
-                className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-blue-700/50 transition-all duration-300"
+              <Link
+                href="/"
+                className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-blue-700/50 transition-all duration-300"
+                onClick={() => setIsMenuOpen(false)}
               >
                 Home
-              </button>
-              <button
-                onClick={() => scrollToSection('about')}
-                className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-blue-700/50 transition-all duration-300"
+              </Link>
+              <Link
+                href="/about"
+                className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-blue-700/50 transition-all duration-300"
+                onClick={() => setIsMenuOpen(false)}
               >
                 About
-              </button>
-              <button
-                onClick={() => scrollToSection('team')}
-                className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-blue-700/50 transition-all duration-300"
+              </Link>
+              <Link
+                href="/team"
+                className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-blue-700/50 transition-all duration-300"
+                onClick={() => setIsMenuOpen(false)}
               >
                 Team
-              </button>
-              <button
-                onClick={() => scrollToSection('contact')}
-                className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-blue-700/50 transition-all duration-300"
+              </Link>
+              <Link
+                href="/contact"
+                className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-blue-700/50 transition-all duration-300"
+                onClick={() => setIsMenuOpen(false)}
               >
                 Contact
-              </button>
-              <button
-                onClick={() => scrollToSection('contact')}
-                className="block w-full text-left px-3 py-2 rounded-md text-base font-medium bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700 transition-all duration-300 border border-blue-500/50"
+              </Link>
+              <Link
+                href="/join"
+                className="block px-3 py-2 rounded-md text-base font-medium bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700 transition-all duration-300 border border-blue-500/50"
+                onClick={() => setIsMenuOpen(false)}
               >
                 Join Us
-              </button>
+              </Link>
             </div>
           </div>
         )}
