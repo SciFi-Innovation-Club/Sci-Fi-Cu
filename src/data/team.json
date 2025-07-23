@@ -1,0 +1,64 @@
+{
+  "teamMembers": [
+    {
+      "id": 1,
+      "name": "Sandeep Vashishtha",
+      "role": "Developer",
+      "description": "Visionary leader passionate about bridging sci-fi and reality through innovative technology solutions.",
+      "image": "#",
+      "linkedin": "sandeep-vashishtha",
+      "github": "sandeepvashishtha",
+      "specialties": ["Full Stack Development"]
+    },
+    {
+      "id": 2,
+      "name": "Alex Chen",
+      "role": "Chief Technology Officer",
+      "description": "Expert in emerging technologies with a passion for turning science fiction concepts into reality.",
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
+      "linkedin": "alex-chen-tech",
+      "github": "alexchen",
+      "specialties": ["Blockchain", "IoT", "Quantum Computing"]
+    },
+    {
+      "id": 3,
+      "name": "Priya Sharma",
+      "role": "Innovation Director",
+      "description": "Creative mastermind behind our most ambitious projects, specializing in UI/UX and human-computer interaction.",
+      "image": "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face",
+      "linkedin": "priya-sharma-design",
+      "github": "priyasharma",
+      "specialties": ["UI/UX Design", "HCI", "Creative Direction"]
+    },
+    {
+      "id": 4,
+      "name": "Marcus Johnson",
+      "role": "Research Lead",
+      "description": "PhD researcher focusing on the intersection of science fiction literature and technological innovation.",
+      "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face",
+      "linkedin": "marcus-johnson-research",
+      "github": "marcusj",
+      "specialties": ["Research", "Data Science", "Academic Writing"]
+    },
+    {
+      "id": 5,
+      "name": "Sofia Rodriguez",
+      "role": "Community Manager",
+      "description": "Builds and nurtures our vibrant community of sci-fi enthusiasts and innovators.",
+      "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
+      "linkedin": "sofia-rodriguez-community",
+      "github": "sofiarodriguez",
+      "specialties": ["Community Building", "Event Management", "Social Media"]
+    },
+    {
+      "id": 6,
+      "name": "David Kim",
+      "role": "Technical Advisor",
+      "description": "Senior engineer with expertise in robotics and automation, bringing futuristic concepts to life.",
+      "image": "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=400&h=400&fit=crop&crop=face",
+      "linkedin": "david-kim-robotics",
+      "github": "davidkim",
+      "specialties": ["Robotics", "Automation", "Hardware Development"]
+    }
+  ]
+}
