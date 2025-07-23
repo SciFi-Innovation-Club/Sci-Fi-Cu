@@ -1,6 +1,6 @@
 export default function Join() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 py-20">
+    <div className="min-h-screen bg-gradient-to-br from-purple-1000 via-blue-900 to-purple-1000 py-20">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h1 className="text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">
@@ -66,7 +66,7 @@ export default function Join() {
           </div>
         </div>
 
-        <div className="bg-gradient-to-r from-blue-900/30 to-purple-900/30 p-8 rounded-xl border border-blue-500/30 backdrop-blur-sm text-center">
+        <div className="bg-gray-800/50 p-8 rounded-xl border border-purple-500/20 backdrop-blur-sm backdrop-blur-sm text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Join?</h2>
           <p className="text-gray-300 mb-8 text-lg">
             Connect with us on our social media platforms or reach out directly!
@@ -82,20 +82,20 @@ export default function Join() {
               Follow on Instagram
             </a>
             <a
+              href="https://cuintranet.in/clubs"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 bg-gradient-to-r from-red-500 to-red-700 text-white rounded-lg hover:from-red-600 hover:to-red-800 transition-all duration-300 hover:shadow-lg hover:shadow-red-500/25"
+            >
+              Join Now
+            </a>
+            <a
               href="https://www.linkedin.com/company/103704187"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-700 text-white rounded-lg hover:from-blue-600 hover:to-blue-800 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
             >
               Connect on LinkedIn
-            </a>
-            <a
-              href="https://www.youtube.com/channel/UCrZ84phJVmXK0o5MArsNlbQ"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 bg-gradient-to-r from-red-500 to-red-700 text-white rounded-lg hover:from-red-600 hover:to-red-800 transition-all duration-300 hover:shadow-lg hover:shadow-red-500/25"
-            >
-              Subscribe on YouTube
             </a>
           </div>
 
