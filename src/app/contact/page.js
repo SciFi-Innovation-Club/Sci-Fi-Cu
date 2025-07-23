@@ -1,6 +1,110 @@
+'use client';
+import { useState } from 'react';
 import Stars from '../../components/Stars';
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    subject: 'General Inquiry',
+    message: ''
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+  const [errors, setErrors] = useState({});
+
+  // Handle input changes
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+    
+    // Clear error when user starts typing
+    if (errors[name]) {
+      setErrors(prev => ({
+        ...prev,
+        [name]: ''
+      }));
+    }
+  };
+
+  // Validate form
+  const validateForm = () => {
+    const newErrors = {};
+
+    if (!formData.firstName.trim()) {
+      newErrors.firstName = 'First name is required';
+    }
+
+    if (!formData.lastName.trim()) {
+      newErrors.lastName = 'Last name is required';
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email is required';
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = 'Please enter a valid email address';
+    }
+
+    if (!formData.message.trim()) {
+      newErrors.message = 'Message is required';
+    } else if (formData.message.trim().length < 10) {
+      newErrors.message = 'Message must be at least 10 characters long';
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  // Handle form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    if (!validateForm()) {
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        setSubmitStatus('success');
+        
+        // Reset form
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          subject: 'General Inquiry',
+          message: ''
+        });
+      } else {
+        console.error('API Error:', result.error);
+        setSubmitStatus('error');
+      }
+      
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-950 to-black relative overflow-hidden">
       <Stars />
@@ -20,45 +124,93 @@ export default function Contact() {
             {/* Contact Form */}
             <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-8 rounded-xl border border-blue-500/20 backdrop-blur-sm">
               <h2 className="text-3xl font-bold text-blue-400 mb-6">Send us a Message</h2>
-              <form className="space-y-6">
+              
+              {/* Success Message */}
+              {submitStatus === 'success' && (
+                <div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg">
+                  <div className="flex items-center space-x-2">
+                    <span className="text-2xl">🚀</span>
+                    <div>
+                      <h4 className="text-green-400 font-bold">Message Sent Successfully!</h4>
+                      <p className="text-green-300 text-sm">We'll get back to you within 12 hours.</p>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* Error Message */}
+              {submitStatus === 'error' && (
+                <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg">
+                  <div className="flex items-center space-x-2">
+                    <span className="text-2xl">⚠️</span>
+                    <div>
+                      <h4 className="text-red-400 font-bold">Something went wrong!</h4>
+                      <p className="text-red-300 text-sm">Please try again or contact us directly.</p>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="firstName" className="block text-sm font-medium text-gray-300 mb-2">
-                      First Name
+                      First Name *
                     </label>
                     <input
                       type="text"
                       id="firstName"
                       name="firstName"
-                      className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400"
+                      value={formData.firstName}
+                      onChange={handleChange}
+                      className={`w-full px-4 py-3 bg-gray-700/50 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400 transition-colors ${
+                        errors.firstName ? 'border-red-500' : 'border-gray-600'
+                      }`}
                       placeholder="Your first name"
                     />
+                    {errors.firstName && (
+                      <p className="mt-1 text-sm text-red-400">{errors.firstName}</p>
+                    )}
                   </div>
                   <div>
                     <label htmlFor="lastName" className="block text-sm font-medium text-gray-300 mb-2">
-                      Last Name
+                      Last Name *
                     </label>
                     <input
                       type="text"
                       id="lastName"
                       name="lastName"
-                      className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400"
+                      value={formData.lastName}
+                      onChange={handleChange}
+                      className={`w-full px-4 py-3 bg-gray-700/50 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400 transition-colors ${
+                        errors.lastName ? 'border-red-500' : 'border-gray-600'
+                      }`}
                       placeholder="Your last name"
                     />
+                    {errors.lastName && (
+                      <p className="mt-1 text-sm text-red-400">{errors.lastName}</p>
+                    )}
                   </div>
                 </div>
 
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                    Email Address
+                    Email Address *
                   </label>
                   <input
                     type="email"
                     id="email"
                     name="email"
-                    className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className={`w-full px-4 py-3 bg-gray-700/50 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400 transition-colors ${
+                      errors.email ? 'border-red-500' : 'border-gray-600'
+                    }`}
                     placeholder="your.email@example.com"
                   />
+                  {errors.email && (
+                    <p className="mt-1 text-sm text-red-400">{errors.email}</p>
+                  )}
                 </div>
 
                 <div>
@@ -68,35 +220,59 @@ export default function Contact() {
                   <select
                     id="subject"
                     name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
                     className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white"
                   >
-                    <option>General Inquiry</option>
-                    <option>Join the Club</option>
-                    <option>Event Information</option>
-                    <option>Partnership Opportunity</option>
-                    <option>Technical Support</option>
-                    <option>Other</option>
+                    <option value="General Inquiry">General Inquiry</option>
+                    <option value="Join the Club">Join the Club</option>
+                    <option value="Event Information">Event Information</option>
+                    <option value="Partnership Opportunity">Partnership Opportunity</option>
+                    <option value="Technical Support">Technical Support</option>
+                    <option value="Other">Other</option>
                   </select>
                 </div>
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                    Message
+                    Message *
                   </label>
                   <textarea
                     id="message"
                     name="message"
                     rows={6}
-                    className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400 resize-none"
+                    value={formData.message}
+                    onChange={handleChange}
+                    className={`w-full px-4 py-3 bg-gray-700/50 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400 resize-none transition-colors ${
+                      errors.message ? 'border-red-500' : 'border-gray-600'
+                    }`}
                     placeholder="Tell us about your interest in sci-fi, technology, or any questions you have..."
                   ></textarea>
+                  {errors.message && (
+                    <p className="mt-1 text-sm text-red-400">{errors.message}</p>
+                  )}
+                  <p className="mt-1 text-xs text-gray-400">
+                    {formData.message.length}/500 characters
+                  </p>
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/50 font-medium"
+                  disabled={isSubmitting}
+                  className={`w-full px-8 py-4 rounded-lg font-medium transition-all duration-300 ${
+                    isSubmitting
+                      ? 'bg-gray-600 cursor-not-allowed'
+                      : 'bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 hover:shadow-lg hover:shadow-blue-500/50'
+                  } text-white`}
                 >
-                  Send Message to the Future 🚀
+                  {isSubmitting ? (
+                    <div className="flex items-center justify-center space-x-2">
+                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
+                      <span>Sending to the Future...</span>
+                    </div>
+                  ) : (
+                    'Send Message to the Future 🚀'
+                  )}
                 </button>
               </form>
             </div>
