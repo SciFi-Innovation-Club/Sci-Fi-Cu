@@ -62,7 +62,7 @@ export default function About() {
               </div>
 
               <div className="bg-gray-800/50 p-6 rounded-xl border border-purple-500/20 backdrop-blur-sm hover:border-purple-500/40 transition-all duration-300">
-                <div className="text-4xl mb-4">�</div>
+                <div className="text-4xl mb-4">🎉</div>
                 <h3 className="text-xl font-bold text-purple-400 mb-3">Tech Events</h3>
                 <p className="text-gray-300">
                   Organize hackathons, think-a-thons, and tech hunts that challenge conventional thinking and spark innovation.
