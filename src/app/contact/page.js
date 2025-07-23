@@ -367,7 +367,7 @@ export default function Contact() {
                     className="flex items-center justify-center p-4 bg-gray-500/20 hover:bg-gray-500/30 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-gray-500/25 group"
                   >
                     <div className="text-center">
-                      <div className="text-3xl mb-2">�</div>
+                      <div className="text-3xl mb-2">💻</div>
                       <p className="text-gray-400 font-medium">GitHub</p>
                       <p className="text-gray-400 text-sm">Our Projects</p>
                     </div>
