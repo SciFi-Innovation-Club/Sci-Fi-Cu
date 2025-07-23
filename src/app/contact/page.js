@@ -289,7 +289,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className="text-gray-300 font-medium">Email</p>
-                      <a href="mailto:contact@scificlub.cu.edu.in" className="text-purple-400 hover:text-purple-300">
+                      <a href="mailto:scificlub@gmail.com" className="text-purple-400 hover:text-purple-300">
                         scificlub@gmail.com
                       </a>
                     </div>
