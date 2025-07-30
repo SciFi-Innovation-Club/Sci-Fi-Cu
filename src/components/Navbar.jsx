@@ -10,16 +10,13 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="w-full bg-gradient-to-r from-black via-gray-950 to-black text-white shadow-lg border-b border-blue-500/20 sticky top-0 z-50 backdrop-blur-sm">
+    <nav className="w-full bg-gradient-to-r from-black via-gray-950 to-black text-white sticky top-0 z-50 backdrop-blur-sm pt-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-blue-400 to-purple-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">SF</span>
-              </div>
-              <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              <span className="text-2xl font-bold text-white">
                 Sci-Fi CU
               </span>
             </Link>
@@ -27,38 +24,48 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+            <div className="flex items-center space-x-2 bg-gray-800/50 rounded-full px-4 py-2 backdrop-blur-sm border border-gray-700/50">
               <Link
                 href="/"
-                className="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-blue-700/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
+                className="px-4 py-2 rounded-full text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-300"
               >
                 Home
               </Link>
               <Link
                 href="/about"
-                className="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-blue-700/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
+                className="px-4 py-2 rounded-full text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-300"
               >
                 About
               </Link>
               <Link
+                href="/timeline"
+                className="px-4 py-2 rounded-full text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-300"
+              >
+                Events
+              </Link>
+              <Link
                 href="/team"
-                className="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-blue-700/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
+                className="px-4 py-2 rounded-full text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-300"
               >
                 Team
               </Link>
               <Link
                 href="/contact"
-                className="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-blue-700/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
+                className="px-4 py-2 rounded-full text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-300"
               >
                 Contact
               </Link>
-              <Link
-                href="/join"
-                className="px-4 py-2 rounded-md text-sm font-medium bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/50 border border-blue-500/50"
-              >
-                Join Us
-              </Link>
             </div>
+          </div>
+
+          {/* Apply Now Button */}
+          <div className="hidden md:block">
+            <Link
+              href="/join"
+              className="px-6 py-2 rounded-full text-sm font-medium bg-blue-600 hover:bg-blue-700 text-white transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/50"
+            >
+              Join Now
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -100,6 +107,13 @@ export default function Navbar() {
                 About
               </Link>
               <Link
+                href="/timeline"
+                className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-blue-700/50 transition-all duration-300"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Events
+              </Link>
+              <Link
                 href="/team"
                 className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-blue-700/50 transition-all duration-300"
                 onClick={() => setIsMenuOpen(false)}
@@ -115,10 +129,10 @@ export default function Navbar() {
               </Link>
               <Link
                 href="/join"
-                className="block px-3 py-2 rounded-md text-base font-medium bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700 transition-all duration-300 border border-blue-500/50"
+                className="block px-3 py-2 rounded-full text-base font-medium bg-blue-600 hover:bg-blue-700 text-white transition-all duration-300 text-center"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Join Us
+                Join Now
               </Link>
             </div>
           </div>
