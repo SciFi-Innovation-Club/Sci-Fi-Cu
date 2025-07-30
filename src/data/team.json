@@ -3,12 +3,42 @@
     {
       "id": 1,
       "name": "Sandeep Vashishtha",
-      "role": "Developer",
-      "description": "Visionary leader passionate about bridging sci-fi and reality through innovative technology solutions.",
-      "image": "#",
+      "role": "Technical Head",
+      "description": "I write code that even runs on your cats laptops",
+      "image": "https://drive.google.com/file/d/1YasYWNZVF6sWYCVD_EU41USQ3hV5tMDS/view?usp=drivesdk",
       "linkedin": "sandeepvashishtha",
       "github": "sandeepvashishtha",
-      "specialties": ["Full Stack Development"]
+      "specialties": ["Full-Stack Development", "SpringBoot", "React"]
+    },
+    {
+      "id": 2,
+      "name": "Rashad Ali",
+      "role": "Head of Design",
+      "description": "A creative enthusiast exploring the vast world of expression.",
+      "image": "https://i.postimg.cc/CLtwGVz0/IMG-20240713-151855-857.jpg",
+      "linkedin": "rashadonin",
+      "github": "N/A",
+      "specialties": ["Branding", "Graphic Design", "Logo Design"]
+    },
+    {
+      "id": 3,
+      "name": "R. Grushnesh",
+      "role": "Head - Anchoring and Content Writing",
+      "description": "When I speak, it echoes; when I write, it resonates—leadership in every line!",
+      "image": "https://i.postimg.cc/SN2QkzwB/IMG-20250706-222422-290.webp",
+      "linkedin": "gr06112005",
+      "github": "Grushnesh-06",
+      "specialties": ["Writer", "Developer", "Storyteller", "Poet"]
+    },
+    {
+      "id": 4,
+      "name": "Sukhjeevan Singh",
+      "role": "Event Management and Marketing Team Head",
+      "description": "Driving visibility At the forefront of impactful events and dynamic marketing campaigns that leave a lasting impression.",
+      "image": "https://postimg.cc/gwjhHz33",
+      "linkedin": "Sukhjeevan Singh",
+      "github": "N/A",
+      "specialties": ["Event Management", "Leadership", "Time Management"]
     }
   ]
 }
