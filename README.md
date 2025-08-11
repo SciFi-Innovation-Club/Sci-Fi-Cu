@@ -1,6 +1,6 @@
-# Sci-Fi In## 🌟 Live Website
+# Sci-Fi Innovation Club 🌟 Live Website
 
-🔗 **[Visit Our Website](https://sci-fi-cu-two.vercel.app/)**ation Club 🚀
+🔗 [Visit Our Website](https://sci-fi-cu-two.vercel.app/)
 
 **Exploring the Future Today**
 
@@ -190,6 +190,6 @@ The website is automatically deployed on Vercel. Any changes pushed to the main 
 
 ---
 
-**Sci-Fi Innovation Club** © 2025 | All rights reserved | Designed By: Sandeep Vashishtha
+**Sci-Fi Innovation Club** © 2025 | All rights reserved | Designed By:  [Sandeep Vashishtha](https://github.com/SandeepVashishtha)
 
 *Exploring the Future Today* ✨
