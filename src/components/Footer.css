@@ -1,0 +1,14 @@
+/* Footer Component Styles - src/components/Footer.jsx */
+
+.footer {
+  background: #111827;
+  color: #9ca3af;
+  font-size: 0.875rem;
+  padding: 1rem;
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.footer-text {
+  margin: 0;
+}
