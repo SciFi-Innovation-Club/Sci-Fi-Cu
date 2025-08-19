@@ -3,6 +3,8 @@ import { useState } from 'react';
 import Hero from './components/Hero';
 import SplashScreen from './components/SplashScreen';
 import Navbar from './components/Navbar'; 
+import StarField from './components/StarField';
+import ParticleEffect from './components/ParticleEffect';
 import About from './about/page';
 
 
@@ -15,6 +17,8 @@ export default function Page() {
 
   return (
     <main>
+      <StarField />
+      <ParticleEffect />
       <Navbar />
       {showSplash ? (
         <SplashScreen onComplete={handleSplashComplete} />
