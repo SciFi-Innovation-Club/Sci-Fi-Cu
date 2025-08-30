@@ -20,12 +20,10 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-5 left-0 right-0 z-50 px-6">
-      {/* constrains width and centers horizontally */}
+  <nav className="fixed top-5 left-0 right-0 z-50 px-6">
       <div className="max-w-6xl mx-auto">
-        {/* symmetric grid: 1fr center auto 1fr keeps center always centered */}
-        <div className="grid grid-cols-[1fr_auto_1fr] items-center">
-          {/* Left: Logo / Name */}
+        <div className="grid grid-cols-2 md:grid-cols-[1fr_auto_1fr] items-center">
+          {/* Logo / Name */}
           <motion.a
             href="/"
             className="justify-self-start text-white font-semibold text-lg tracking-wide font-serif italic"
@@ -36,7 +34,7 @@ const Navbar = () => {
             Sci-Fi Innovation Club
           </motion.a>
 
-          {/* Center: pill-shaped nav (centered by grid) */}
+          {/* Center: nav items hidden on mobile */}
           <motion.div
             initial={{ y: -24, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -45,7 +43,7 @@ const Navbar = () => {
               isScrolled
                 ? 'bg-black/80 border border-blue-500/20 shadow-2xl'
                 : 'bg-white/5 border border-white/10 shadow-lg'
-            }`}
+            } hidden md:flex`}
           >
             {navItems.map((item, i) => (
               <motion.a
@@ -63,12 +61,12 @@ const Navbar = () => {
             ))}
           </motion.div>
 
-          {/* Right: Apply Now button */}
+          {/* Apply Now button always visible, shifted to far right */}
           <motion.a
             href="https://cuintranet.in/clubs"
             target="_blank"
             rel="noopener noreferrer"
-            className="justify-self-end bg-red-600 hover:bg-red-700 text-white px-5 py-2 rounded-full font-medium shadow-lg transition-all duration-300"
+            className="justify-self-end ml-auto bg-red-600 hover:bg-red-700 text-white px-5 py-2 rounded-full font-medium shadow-lg transition-all duration-300"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             initial={{ opacity: 0, x: 12 }}
