@@ -1,0 +1,31 @@
+{
+  "members": [
+    {
+      "name": "Krish Gauttam",
+      "role": "Joint Secretary",
+      "image": "https://avatars.githubusercontent.com/u/12345678?v=4",
+      "linkedin": "krish-177a5a276",
+      "github": "Krish-Gauttam",
+      "description": "Passionate about sci-fi and technology, leading innovation at the club.",
+      "specialties": ["React", "Next.js", "UI/UX"]
+    },
+    {
+      "name": "Ashish Singh",
+      "role": "Secretary",
+      "image": "https://avatars.githubusercontent.com/u/87654321?v=4",
+      "linkedin": "rishi-raj-gautam-232221276",
+      "github": "rishi-raj-gautam",
+      "description": "Creative thinker and organizer, driving club events and outreach.",
+      "specialties": ["Event Management", "Design", "Community"]
+    },
+    {
+      "name": "Dr. Sartajvir Singh Dhillon",
+      "role": "Faculty Advisor",
+      "image": "https://media.licdn.com/dms/image/C4D03AQFQw8w8w8w8w8/profile-displayphoto-shrink_200_200/0?e=1699488000&v=beta&t=xyz",
+      "linkedin": "sartajvir",
+      "github": "",
+      "description": "Guiding the club with expertise in science and innovation.",
+      "specialties": ["Mentorship", "Research", "Leadership"]
+    }
+  ]
+}

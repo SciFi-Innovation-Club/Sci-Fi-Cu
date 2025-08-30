@@ -7,6 +7,9 @@ import StarField from './components/StarField';
 import ParticleEffect from './components/ParticleEffect';
 import About from './about/page';
 import EventsPage from './events/page';
+import GalleryCarousel from './components/GalleryCarousel';
+import TeamCarousel from './components/TeamCarousel';
+import Footer from './components/Footer';
 
 
 export default function Page() {
@@ -25,8 +28,10 @@ export default function Page() {
       ) : (
         <Hero />
       )}
-      <About />
-      <EventsPage />
+  <About />
+  <EventsPage />
+  <TeamCarousel />
+  <Footer />
     </main>
   );
 }
