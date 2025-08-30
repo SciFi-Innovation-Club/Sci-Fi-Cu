@@ -1,0 +1,34 @@
+{
+  "events": [
+    {
+      "title": "TECH-A-HUNT",
+      "date": "March 2025",
+      "status": "Closed",
+      "location": "Chandigarh University",
+      "image": "https://sficcu.vercel.app/assets/Synergy-Bkh3wzxd.png",
+      "photos": [
+        "https://sficcu.vercel.app/assets/gallery1-1b0UnlhH.jpg",
+        "https://sficcu.vercel.app/assets/gallery2-BgfdLor_.jpg"
+      ],
+      "description": "A campus-wide tech treasure hunt for sci-fi enthusiasts."
+    },
+    {
+      "title": "THINK-A-THON",
+      "date": "February 2025",
+      "status": "Upcoming",
+      "location": "Chandigarh University",
+      "image": "",
+      "photos": [],
+      "description": "A brainstorming marathon for creative solutions."
+    },
+    {
+      "title": "Sci-Fi Hackathon",
+      "date": "5 October 2025",
+      "status": "Upcoming",
+      "location": "B1 Block, Chandigarh University",
+      "image": "",
+      "photos": [],
+      "description": "A hackathon focused on futuristic tech and innovation."
+    }
+  ]
+}
