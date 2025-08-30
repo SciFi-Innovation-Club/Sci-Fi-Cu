@@ -12,8 +12,8 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { name: 'Home', href: '#' },
-    { name: 'About Us', href: '#about' },
+    { name: 'Home', href: '/' },
+    { name: 'About Us', href: '/about' },
     { name: 'Events', href: '#events' },
     { name: 'Team', href: '#team' },
     { name: 'Contact', href: '#contact' },
@@ -27,7 +27,7 @@ const Navbar = () => {
         <div className="grid grid-cols-[1fr_auto_1fr] items-center">
           {/* Left: Logo / Name */}
           <motion.a
-            href="#home"
+            href="/"
             className="justify-self-start text-white font-semibold text-lg tracking-wide font-serif italic"
             initial={{ opacity: 0, x: -12 }}
             animate={{ opacity: 1, x: 0 }}
@@ -63,12 +63,12 @@ const Navbar = () => {
             ))}
           </motion.div>
 
-          {/* Right: Resume button */}
+          {/* Right: Apply Now button */}
           <motion.a
-            href="#"
+            href="https://cuintranet.in/clubs"
             target="_blank"
             rel="noopener noreferrer"
-            className="justify-self-end bg-red-500 hover:bg-red-600 text-white px-5 py-2 rounded-full font-medium shadow-lg transition-all duration-300"
+            className="justify-self-end bg-red-600 hover:bg-red-700 text-white px-5 py-2 rounded-full font-medium shadow-lg transition-all duration-300"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             initial={{ opacity: 0, x: 12 }}
