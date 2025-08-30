@@ -16,10 +16,9 @@ export default function Page() {
   };
 
   return (
-    <main>
-      <StarField />
-      <ParticleEffect />
+    <main className="min-h-screen bg-black text-white">
       <Navbar />
+  <div className="mt-0 md:mt-0" />
       {showSplash ? (
         <SplashScreen onComplete={handleSplashComplete} />
       ) : (
