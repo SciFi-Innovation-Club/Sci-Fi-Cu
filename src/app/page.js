@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import StarField from './components/StarField';
 import ParticleEffect from './components/ParticleEffect';
 import About from './about/page';
+import EventsPage from './events/page';
 
 
 export default function Page() {
@@ -25,6 +26,7 @@ export default function Page() {
         <Hero />
       )}
       <About />
+      <EventsPage />
     </main>
   );
 }
