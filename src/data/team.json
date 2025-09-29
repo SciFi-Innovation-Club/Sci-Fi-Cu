@@ -1,0 +1,40 @@
+{
+  "team": [
+    {
+      "id": 1,
+      "name": "Ashish Kumar",
+      "role": "Secretary",
+      "avatar": "/Ashish.jpeg",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/dear-ashish"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Krish Gauttam",
+      "role": "Joint Secretary",
+      "avatar": "/Krish.jpeg",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/krish2136/"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Harshita Pandey",
+      "role": "Joint Secretary",
+      "avatar": "/Harshita.jpeg",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/harshita-pandey-b6853a290/"
+      }
+    },
+    {
+      "id": 4,
+      "name": "V Ishitha",
+      "role": "Joint Secretary",
+      "avatar": "/Ishita.jpeg",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/v-ishitha-62918928a/"
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+<!-- This is a placeholder file - you'll need to add actual mentor images here -->
+<!-- Create files named: -->
+<!-- Sachin Sir.jpeg -->
+<!-- Ruchika M.jpeg -->
+<!-- Puneet SIr.jpeg -->
+<!-- Gurmeet.jpeg -->
+<!-- LOGO.png -->
+
+<!-- For now, the site will show broken images until you add these files -->

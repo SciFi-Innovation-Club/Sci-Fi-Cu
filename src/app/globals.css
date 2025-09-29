@@ -1,34 +1,31 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 :root {
-  --background: #000000;
+  --background: #ffffff;
+  --foreground: #171717;
 }
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
 }
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
 body {
   background: var(--background);
-  height: 100vh;
-}
-
-html, body {
-  margin: 0;
-  padding: 0;
-}
-
-.splash {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background: radial-gradient(circle, #ffefba, #ffffff);
-}
-
-.namaste {
-  font-size: 4rem;
-  font-family: 'Noto Sans Devanagari', sans-serif;
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
 }
