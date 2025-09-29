@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function ThemedBackground({ children }) {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-white dark:bg-black overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center bg-transparent overflow-hidden">
       {/* Animated Background Blobs */}
       <motion.div
         className="absolute top-0 left-1/4 w-72 h-72 bg-indigo-100 dark:bg-indigo-900/30 rounded-full filter blur-3xl opacity-40"
