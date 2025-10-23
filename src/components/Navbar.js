@@ -13,6 +13,8 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const whatappLink = "https://chat.whatsapp.com/BklWgZNKAOTDdX2KOOAUvr";
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm border-b bg-black/90 border-gray-800">
       <div className="max-w-full mx-auto px-8">
@@ -63,13 +65,13 @@ const Navbar = () => {
           {/* Buttons - Desktop */}
           <div className="hidden md:flex items-center space-x-4">
             <a
-              href="/join"
+              href="https://cuintranet.in/clubs"
               className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-full font-medium transition-colors"
             >
               Join Now
             </a>
             <a
-              href="https://chat.whatsapp.com/BklWgZNKAOTDdX2KOOAUvr"
+              href={whatappLink}
               target="_blank"
               rel="noopener noreferrer"
               className="border border-gray-600 hover:border-gray-500 text-gray-300 hover:text-white px-6 py-2 rounded-full font-medium transition-colors"
@@ -132,14 +134,14 @@ const Navbar = () => {
               {/* Mobile Buttons */}
               <div className="mt-4 space-y-2">
                 <Link
-                  href="/join"
+                  href="https://cuintranet.in/clubs"
                   className="block bg-purple-600 hover:bg-purple-700 text-white px-3 py-2 rounded-full font-medium transition-colors text-center"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Join Now
                 </Link>
                 <a
-                  href="https://chat.whatsapp.com/BklWgZNKAOTDdX2KOOAUvr"
+                  href={whatappLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block border border-gray-600 hover:border-gray-500 text-gray-300 hover:text-white px-3 py-2 rounded-full font-medium transition-colors text-center"
