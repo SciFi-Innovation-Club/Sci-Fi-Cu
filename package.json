@@ -1,27 +1,27 @@
 {
-  "name": "sci-fi-innovation-club",
-  "version": "0.1.0",
-  "private": true,
-  "author": "sandeep vashishtha",
-  "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
-    "start": "next start",
-    "lint": "eslint"
-  },
-  "dependencies": {
-    "framer-motion": "^12.23.22",
-    "lucide-react": "^0.544.0",
-    "motion": "^12.23.26",
-    "next": "15.5.4",
-    "react": "19.1.0",
-    "react-dom": "19.1.0"
-  },
-  "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "@tailwindcss/postcss": "^4",
-    "eslint": "^9",
-    "eslint-config-next": "15.5.4",
-    "tailwindcss": "^4"
-  }
+    "name": "sci-fi-innovation-club",
+    "version": "0.1.0",
+    "private": true,
+    "author": "sandeep vashishtha",
+    "scripts": {
+        "dev": "next dev --turbopack",
+        "build": "next build --turbopack",
+        "start": "next start",
+        "lint": "eslint"
+    },
+    "dependencies": {
+        "framer-motion": "^12.23.22",
+        "lucide-react": "^0.544.0",
+        "motion": "^12.23.26",
+        "next": "^15.5.9",
+        "react": "^19.2.3",
+        "react-dom": "^19.2.3"
+    },
+    "devDependencies": {
+        "@eslint/eslintrc": "^3",
+        "@tailwindcss/postcss": "^4",
+        "eslint": "^9",
+        "eslint-config-next": "^15.1.4",
+        "tailwindcss": "^4"
+    }
 }
