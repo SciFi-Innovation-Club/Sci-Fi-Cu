@@ -1,9 +1,5 @@
-import ThemedBackground from "../components/ThemedBackground";
-import Team from "./team/page";
+import { redirect } from 'next/navigation';
 
-export default function Home() {
-  return (
-    <ThemedBackground>
-    </ThemedBackground>
-  );
+export default function Page() {
+  redirect('/home');
 }
